@@ -35,7 +35,8 @@
         android:layout_marginTop="19dp"
         android:textOn="Stop"
         android:textOff="Record"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:height="100dp" />
 
     <TextView
         android:id="@+id/count"

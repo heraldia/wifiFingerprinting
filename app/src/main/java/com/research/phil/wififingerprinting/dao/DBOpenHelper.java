@@ -29,7 +29,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 //					+ "time DATETIME)");
             db.execSQL("create table IF NOT EXISTS wifiaps "
                     + "(id integer PRIMARY KEY AutoIncrement NOT NULL,"
-                    + "wifiaplist VARCHAR(1000),"
+                    + "wifiaplist TEXT,"
                     + "location VARCHAR(100),"
                     + "time DATETIME)");
             db.execSQL("create table IF NOT EXISTS wifissid "

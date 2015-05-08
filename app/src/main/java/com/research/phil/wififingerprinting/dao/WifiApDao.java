@@ -39,7 +39,6 @@ public class WifiApDao {
         for (WifiAP wifiAP : wifiAPList) {
             bSSIDString = wifiAP.BSSID;
             sSIDString = wifiAP.SSID;
-            bSSIDString.replace(":", "");
 
             if (emptyByBssid(bSSIDString)) {
                 Log.i("WifiApDao", "add3 done--45" +emptyByBssid(bSSIDString));
@@ -67,17 +66,20 @@ public class WifiApDao {
         db = helper.getWritableDatabase();
         String bSSIDString;
         String sSIDString;
+        String temp;
         String levelString;
 
         StringBuffer allBSsids = new StringBuffer();
 
         for (WifiAP wifiAP : wifiAPList) {
             bSSIDString = wifiAP.BSSID;
-            bSSIDString.replace(":","");
+            temp=bSSIDString.replace(":","");
+            temp = temp.substring(temp.length()-5,temp.length());
+            Log.e("substring", temp);
             sSIDString = wifiAP.SSID;
             levelString = String.valueOf(wifiAP.level);
 
-            allBSsids.append(bSSIDString);
+            allBSsids.append(temp);
 //            allBSsids.append(",");
 //            allBSsids.append(sSIDString);
             allBSsids.append(";");
