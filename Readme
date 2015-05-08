@@ -1,0 +1,5 @@
+using{{{1  2015-5-8 07:58:56
+adb shell 
+chmod 666 /data/data/com.research.phil.adlrecorder/databases/adlrecord.db
+In windows cmd:
+adb pull /data/data/com.research.phil.adlrecorder/databases/adlrecord.db

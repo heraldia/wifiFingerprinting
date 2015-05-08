@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">wifiFingerprinting</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="room">Room</string>
+    <string name="location">Location</string>
+    <string name="action_settings">Settings</string>
+    <string name="press">Long press</string>
+
+</resources>
