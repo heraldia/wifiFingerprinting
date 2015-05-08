@@ -20,13 +20,24 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 	{
 //		Log.i("DBphil", "DBOpenHelper--onCreate--21");
 		try {
-			db.execSQL("create table IF NOT EXISTS wifirssi "
-					+ "(id integer PRIMARY KEY AutoIncrement NOT NULL,"
-					+ "ORION140 integer,NETGEAR54 integer,Cheese integer," 
-					+ "HPPrint45 integer,Judhajeet integer,NETGEAR17 integer," 
-					+ "DespicableLadies integer,Baking integer, unit204 integer," 
-					+ "location VARCHAR(100)," 
-					+ "time DATETIME)");
+//			db.execSQL("create table IF NOT EXISTS wifirssi "
+//					+ "(id integer PRIMARY KEY AutoIncrement NOT NULL,"
+//					+ "ORION140 integer,NETGEAR54 integer,Cheese integer,"
+//					+ "HPPrint45 integer,Judhajeet integer,NETGEAR17 integer,"
+//					+ "DespicableLadies integer,Baking integer, unit204 integer,"
+//					+ "location VARCHAR(100),"
+//					+ "time DATETIME)");
+            db.execSQL("create table IF NOT EXISTS wifiaps "
+                    + "(id integer PRIMARY KEY AutoIncrement NOT NULL,"
+                    + "wifiaplist VARCHAR(1000),"
+                    + "location VARCHAR(100),"
+                    + "time DATETIME)");
+            db.execSQL("create table IF NOT EXISTS wifissid "
+                    + "(id integer PRIMARY KEY AutoIncrement NOT NULL,"
+                    + "wifiap VARCHAR(100),"
+                    + "ssid VARCHAR(100),"
+                    + "location VARCHAR(100),"
+                    + "time DATETIME)");
 			Log.i("DBphil", "DBOpenHelper--onCreate--28 ");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

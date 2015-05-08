@@ -125,15 +125,18 @@ public class MainActivity extends ActionBarActivity {
 	            public int compare(WifiAP list1, WifiAP list2) {
 	            	return (list1.level>list2.level ? -1 : (list1.level==list2.level ? 0 : 1));
 	            }
-	        }); 
+	        });
 
 	    	//=============================================
+            Log.i("phil", "--------------------");
+            /*
 			for(WifiAP wifiAP :wifiAPList){
 				Log.i("phil", wifiAP.BSSID+" -- "+ wifiAP.SSID+ " -- " + wifiAP.level + "dBm");
 			}
-			
+			*/
+
 			if (locationString != null && wifiAPList.size() >0) {
-				Log.i("phil", locationString);
+				Log.i("phil", locationString+"--------------------");
 				addToDb(wifiAPList,locationString);
 			}
 	    	//=============================================
